@@ -12,6 +12,21 @@ class MovieListing extends StatefulWidget {
 class _MovieListingState extends State<MovieListing> {
   int _selectedQuantity = 5;
 
+  void _showPurchaseDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text("Purchase Successful"),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text("OK"),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +68,11 @@ class _MovieListingState extends State<MovieListing> {
                   DropdownMenuEntry(value: 4, label: '4'),
                   DropdownMenuEntry(value: 5, label: '5'),
                 ],
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: _showPurchaseDialog,
+                child: const Text("Press to Purchase"),
               ),
             ],
           ),
