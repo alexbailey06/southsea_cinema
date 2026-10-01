@@ -43,6 +43,7 @@ class _MovieListingState extends State<MovieListing> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 50,
             children: [
               const Text('Bullet Train (2022) (R)'),
               const Text('Southsea Cinema Room'),
