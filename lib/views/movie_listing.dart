@@ -45,14 +45,14 @@ class _MovieListingState extends State<MovieListing> {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 50,
             children: [
-              const Text('Bullet Train (2022) (R)'),
-              const Text('Southsea Cinema Room'),
-              const Text('Monday 10th November 2026 13:30 - ends at 16:00'),
+              const Text("Bullet Train (2022) (R)"),
+              const Text("Southsea Cinema Room"),
+              const Text("Monday 10th November 2026 13:30 - ends at 16:00"),
               const Text(
-                'Note that Discounts/Membership benefits apply after tickets are selected.',
+                "Note that Discounts/Membership benefits apply after tickets are selected.",
               ),
-              const Text('Selected Quantity (Up to 5 in total)'),
-              const Text('Tickets:'),
+              const Text("Selected Quantity (Up to 5 in total)"),
+              const Text("Tickets:"),
               DropdownMenu<int>(
                 initialSelection: _selectedQuantity,
                 onSelected: (int? value) {
@@ -63,11 +63,11 @@ class _MovieListingState extends State<MovieListing> {
                   }
                 },
                 dropdownMenuEntries: const [
-                  DropdownMenuEntry(value: 1, label: '1'),
-                  DropdownMenuEntry(value: 2, label: '2'),
-                  DropdownMenuEntry(value: 3, label: '3'),
-                  DropdownMenuEntry(value: 4, label: '4'),
-                  DropdownMenuEntry(value: 5, label: '5'),
+                  DropdownMenuEntry(value: 1, label: "1"),
+                  DropdownMenuEntry(value: 2, label: "2"),
+                  DropdownMenuEntry(value: 3, label: "3"),
+                  DropdownMenuEntry(value: 4, label: "4"),
+                  DropdownMenuEntry(value: 5, label: "5"),
                 ],
               ),
               const SizedBox(height: 16),
