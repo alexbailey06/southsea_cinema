@@ -44,7 +44,7 @@ class _MovieListingState extends State<MovieListing> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 40,
+          spacing: 30,
           children: [
             const Text("Bullet Train (2022) (R)",
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: cinemaFontWhite)),
