@@ -60,6 +60,7 @@ class _MovieListingState extends State<MovieListing> {
             style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
             const Text("Tickets:",
             style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
+            Row(children: [
             DropdownMenu<int>(
               initialSelection: _selectedQuantity,
               onSelected: (int? value) {
@@ -75,6 +76,10 @@ class _MovieListingState extends State<MovieListing> {
                 DropdownMenuEntry(value: 3, label: "3"),
                 DropdownMenuEntry(value: 4, label: "4"),
                 DropdownMenuEntry(value: 5, label: "5"),
+              ],
+            ),
+            Text("Adult £7.50",
+            style: TextStyle(fontSize: 18, color: cinemaFontWhite))
               ],
             ),
             const SizedBox(height: 16),
