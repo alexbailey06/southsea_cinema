@@ -27,6 +27,7 @@ class FilmRepository {
       ),
     ];
   }
+
   Film? getFilmById(String id) {
     for (final film in getFilms()) {
       if (film.id == id) {
