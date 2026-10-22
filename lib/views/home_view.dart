@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/model/film.dart';
 import 'package:southsea_cinema/repositories/film_repository.dart';
 import 'package:southsea_cinema/widgets/film_card.dart';
+import 'package:southsea_cinema/widgets/nav_drawer.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -13,8 +15,13 @@ class HomeView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Film Menu"),
+        title: const Text(appTitle, style: cinemaHeaderStyle),
+        centerTitle: true,
+        backgroundColor: cinemaSurface,
+        iconTheme: const IconThemeData(color: cinemaBrand),
+        elevation: 0,
       ),
+      drawer: const NavDrawer(),
       body: ListView.builder(
         itemCount: films.length,
         itemBuilder: (context, index) {
