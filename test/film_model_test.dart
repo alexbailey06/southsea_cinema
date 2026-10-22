@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:southsea_cinema/model/film.dart';
+import 'package:southsea_cinema/repositories/film_repository.dart';
 
 void main() {
   group('Film model tests', () {
@@ -31,7 +32,7 @@ void main() {
     test(
       'formattedPrice returns price prefixed with pound sign and two decimals',
       () {
-      const film = Film(
+        const film = Film(
           id: 'bullet train',
           name: 'Bullet Train',
           description:
@@ -46,5 +47,20 @@ void main() {
         expect(film.formattedPrice, '£10.00');
       },
     );
+  });
+  test("getFilmById returns matching film when id exists", () {
+    final repository = FilmRepository();
+    final film = repository.getFilmById("bullet train");
+
+    expect(film, isNotNull);
+    expect(film?.name, "Bullet Train");
+    expect(film?.price, 10.00);
+  });
+
+  test("getFilmById returns null when id does not exist", () {
+    final repository = FilmRepository();
+    final film = repository.getFilmById("non-existent");
+
+    expect(film, isNull);
   });
 }

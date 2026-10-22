@@ -22,11 +22,28 @@ class HomeView extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: ListView.builder(
-        itemCount: films.length,
-        itemBuilder: (context, index) {
-          return FilmCard(film: films[index]);
-        },
+      body: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Welcome to Southsea Cinema',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: cinemaFontWhite,
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: films.length,
+              itemBuilder: (context, index) {
+                return FilmCard(film: films[index]);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
