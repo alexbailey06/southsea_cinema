@@ -11,7 +11,7 @@ class FilmRepository {
         ageRating:"Rated 15",
         runTime:"2 hours, 6 minutes",
         screeningTime:"6:30",
-        price: "£10.00",
+        price: 10.0,
         imagePath: "assets/images/bullet_train.jpeg",
       ),
       Film(
@@ -22,7 +22,7 @@ class FilmRepository {
         ageRating:"PG 13",
         runTime:"2 hours, 9 minutes",
         screeningTime:"8:45",
-        price: "£10.00",
+        price: 10.0,
         imagePath: "assets/images/superman.jpeg",
 ),
     ];

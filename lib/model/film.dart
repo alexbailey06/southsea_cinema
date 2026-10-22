@@ -5,7 +5,7 @@ class Film {
   final String ageRating;
   final String runTime;
   final String screeningTime;
-  final String price;
+  final double price;
   final String imagePath;
 
   const Film({

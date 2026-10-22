@@ -49,7 +49,7 @@ class FilmCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  film.price,
+                  "£${film.price.toStringAsFixed(2)}",
                   style: const TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
