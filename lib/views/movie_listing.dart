@@ -44,13 +44,25 @@ class _MovieListingState extends State<MovieListing> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 30,
+          spacing: 15,
           children: [
             const Text("Bullet Train (2022) (Rated 15)",
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: cinemaFontWhite)),
+            const SizedBox(height: 12.0),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  "assets/images/bullet_train_poster.jpeg",
+                  width: 100.0,
+                  height: 150.0,
+                  fit: BoxFit.cover,
+                ),
+              ],
+            ),
             const Text("Southsea Cinema Room",
                 style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
             const Text("Saturday 31st October 2026 18:30 - ends at 16:00",
