@@ -46,14 +46,14 @@ class _MovieListingState extends State<MovieListing> {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: 30,
           children: [
-            const Text("Bullet Train (2022) (R)",
+            const Text("Bullet Train (2022) (Rated 15)",
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: cinemaFontWhite)),
             const Text("Southsea Cinema Room",
                 style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
-            const Text("Monday 10th November 2026 13:30 - ends at 16:00",
+            const Text("Saturday 31st October 2026 18:30 - ends at 16:00",
                 style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
             const Text(
               "Note that Discounts/Membership benefits apply after tickets are selected.",
