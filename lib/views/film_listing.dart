@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
+import 'package:southsea_cinema/model/film.dart';
 
-class MovieListing extends StatefulWidget {
-  const MovieListing({super.key});
+class FilmListing extends StatefulWidget {
+  final Film film;
+  const FilmListing({required this.film, super.key});
 
   @override
-  State<MovieListing> createState() => _MovieListingState();
+  State<FilmListing> createState() => _FilmListingState();
 }
 
-class _MovieListingState extends State<MovieListing> {
+class _FilmListingState extends State<FilmListing> {
   int _selectedQuantity = 5;
 
   void _showPurchaseDialog() {
@@ -46,26 +48,36 @@ class _MovieListingState extends State<MovieListing> {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: 15,
           children: [
-            const Text("Bullet Train (2022) (Rated 15)",
+             Text("${widget.film.name} ${widget.film.ageRating}",
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: cinemaFontWhite)),
+              Text(widget.film.description,
+                style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: cinemaFontWhite),
+                    overflow: TextOverflow.ellipsis, 
+                    maxLines: 3),
             const SizedBox(height: 12.0),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                  "assets/images/bullet_train_poster.jpeg",
+                  widget.film.imagePath,
                   width: 100.0,
                   height: 150.0,
                   fit: BoxFit.cover,
                 ),
+            
+              
+                    
               ],
             ),
             const Text("Southsea Cinema Room",
                 style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
-            const Text("Saturday 31st October 2026 18:30 - ends at 16:00",
+            Text(widget.film.screeningTime,
                 style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
             const Text(
               "Note that Discounts/Membership benefits apply after tickets are selected.",

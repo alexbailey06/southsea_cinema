@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/model/film.dart';
+import 'package:southsea_cinema/views/film_listing.dart';
 
 class FilmCard extends StatelessWidget {
   final Film film;
@@ -77,7 +78,10 @@ class FilmCard extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   shape: const RoundedRectangleBorder(),
                 ),
-                onPressed: () => Navigator.pushNamed(context, '/listing'),
+                onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                  return FilmListing(film: film);
+                })),
                 child: const Text('BOOK NOW'),
               ),
             ],
