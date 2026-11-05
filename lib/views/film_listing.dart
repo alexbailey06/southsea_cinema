@@ -112,6 +112,13 @@ class _FilmListingState extends State<FilmListing> {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: cinemaBrand,
+                foregroundColor: cinemaFontWhite,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                ),
+              ),
               onPressed: _showPurchaseDialog,
               child: const Text("Press to Purchase"),
             ),
