@@ -1,10 +1,10 @@
 import 'package:southsea_cinema/model/film.dart';
 
-class CartItem {
+class BasketItem {
   final Film film;
   final int quantity;
 
-  const CartItem({
+  const BasketItem({
     required this.film,
     required this.quantity,
   });

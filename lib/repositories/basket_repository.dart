@@ -1,17 +1,17 @@
-import 'package:southsea_cinema/model/cart_item.dart';
+import 'package:southsea_cinema/model/basket_item.dart';
 
-class CartRepository {
-  CartRepository._internal();
+class BasketRepository {
+  BasketRepository._internal();
 
-  static CartRepository get instance => CartRepository._internal();
+  static BasketRepository get instance => BasketRepository._internal();
 
-  final List<CartItem> _items = [];
+  final List<BasketItem> _items = [];
 
-  List<CartItem> getItems() {
-    return List<CartItem>.unmodifiable(_items);
+  List<BasketItem> getItems() {
+    return List<BasketItem>.unmodifiable(_items);
   }
 
-  void addItem(CartItem item) {
+  void addItem(BasketItem item) {
     _items.add(item);
   }
 
@@ -23,7 +23,7 @@ class CartRepository {
 
   int getTotalItems() {
     int total = 0;
-    for (final CartItem item in _items) {
+    for (final BasketItem item in _items) {
       total += item.quantity;
     }
     return total;
@@ -35,7 +35,7 @@ class CartRepository {
 
   double getSubtotal() {
     double sum = 0.0;
-    for (final CartItem item in _items) {
+    for (final BasketItem item in _items) {
       sum += item.lineTotal;
     }
     return sum;
