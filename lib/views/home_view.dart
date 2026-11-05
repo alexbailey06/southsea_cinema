@@ -16,10 +16,6 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(appTitle, style: cinemaHeaderStyle),
-        centerTitle: true,
-        backgroundColor: cinemaSurface,
-        iconTheme: const IconThemeData(color: cinemaBrand),
-        elevation: 0,
       ),
       drawer: const NavDrawer(),
       body: Column(
@@ -27,7 +23,7 @@ class HomeView extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemCount: films.length,
-              itemBuilder: (context, index) {
+              itemBuilder: (BuildContext context, int index) {
                 return FilmCard(film: films[index]);
               },
             ),
