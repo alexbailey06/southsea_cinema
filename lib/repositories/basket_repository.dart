@@ -3,7 +3,7 @@ import 'package:southsea_cinema/model/basket_item.dart';
 class BasketRepository {
   BasketRepository._internal();
 
-  static BasketRepository get instance => BasketRepository._internal();
+  static final BasketRepository instance = BasketRepository._internal();
 
   final List<BasketItem> _items = [];
 
@@ -52,7 +52,7 @@ class BasketRepository {
     return getSubtotal() + getDeliveryFee();
   }
 
-    void clear() {
+  void clear() {
     _items.clear();
   }
 }
