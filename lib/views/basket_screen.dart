@@ -20,7 +20,7 @@ class _BasketScreenState extends State<BasketScreen> {
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 32.0),
         child: Text(
-          'Your basket is empty',
+          "Your basket is empty",
           style: TextStyle(fontSize: 16, color: Colors.grey),
         ),
       ),
@@ -38,10 +38,10 @@ class _BasketScreenState extends State<BasketScreen> {
               children: [
                 Text(
                   '${item.quantity} x ${item.film.name}',
-                  style: const TextStyle(fontWeight: FontWeight.w600),
+                  style: const TextStyle(fontWeight: FontWeight.w600, color: cinemaFontWhite),
                 ),
                 const SizedBox(height: 4),
-                Text('£${item.lineTotal.toStringAsFixed(2)}'),
+                Text("£${item.lineTotal.toStringAsFixed(2)}", style: const TextStyle(color: cinemaFontWhite)),
               ],
             ),
           ),
@@ -81,7 +81,7 @@ class _BasketScreenState extends State<BasketScreen> {
   Widget _buildBasketList(BasketRepository cart, List<BasketItem> items) {
     final List<Widget> children = [];
 
-    children.add(const Text('Your basket', style: cinemaHeaderStyle));
+    children.add(const Text("Your basket", style: cinemaHeaderStyle));
     children.add(const SizedBox(height: 16));
 
     for (int index = 0; index < items.length; index++) {
@@ -92,20 +92,20 @@ class _BasketScreenState extends State<BasketScreen> {
     children.add(const SizedBox(height: 24));
     children.add(
       _buildTotalRow(
-        'Items subtotal',
-        '£${cart.getSubtotal().toStringAsFixed(2)}',
+        "Items subtotal",
+        "£${cart.getSubtotal().toStringAsFixed(2)}",
       ),
     );
     children.add(
       _buildTotalRow(
-        'Delivery',
-        '£${cart.getDeliveryFee().toStringAsFixed(2)}',
+        "Delivery",
+        "£${cart.getDeliveryFee().toStringAsFixed(2)}",
       ),
     );
     children.add(
       _buildTotalRow(
-        'Total to pay',
-        '£${cart.getTotalDue().toStringAsFixed(2)}',
+        "Total to pay",
+        "£${cart.getTotalDue().toStringAsFixed(2)}",
         emphasise: true,
       ),
     );
@@ -115,11 +115,11 @@ class _BasketScreenState extends State<BasketScreen> {
       SizedBox(
         width: double.infinity,
         child: PrimaryButton(
-          label: 'checkout',
+          label: "checkout",
           onPressed: () {
             setState(() {
               cart.clear();
-              _confirmationMessage = 'thank you for ordering, it has been placed';
+              _confirmationMessage = "thank you for ordering, it has been placed";
             });
           },
         ),
