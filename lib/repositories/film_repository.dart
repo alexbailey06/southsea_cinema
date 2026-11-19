@@ -21,7 +21,7 @@ class FilmRepository {
             "Superman faces unintended consequences after he intervenes in an international conflict orchestrated by billionaire Lex Luthor (Hoult).",
         ageRating: "PG 13",
         runTime: "2 hours, 9 minutes",
-        screeningTime: "novemeber 4th 2026, 20:45",
+        screeningTime: "november 4th 2026, 20:45",
         price: 10.00,
         imagePath: "assets/images/superman_poster.jpg",
       ),
