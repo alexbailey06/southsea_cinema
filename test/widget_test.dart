@@ -3,7 +3,6 @@ import 'package:southsea_cinema/main.dart';
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/repositories/basket_repository.dart';
 import 'package:southsea_cinema/widgets/primary_button.dart';
-import 'package:flutter/services.dart';
 
 void main() {
   group("App tests", () {
