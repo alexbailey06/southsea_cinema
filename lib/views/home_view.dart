@@ -3,7 +3,6 @@ import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/model/film.dart';
 import 'package:southsea_cinema/repositories/film_repository.dart';
 import 'package:southsea_cinema/widgets/basket_button.dart';
-import 'package:southsea_cinema/widgets/setting_button.dart';
 import 'package:southsea_cinema/widgets/film_card.dart';
 
 class HomeView extends StatefulWidget {

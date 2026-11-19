@@ -66,64 +66,62 @@ class _SettingsScreenState extends State<SettingsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Customer Profile',
+              "Customer Profile",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: cinemaFontWhite,
               ),
             ),
             const SizedBox(height: 16),
             TextField(
               controller: _nameController,
-              style: const TextStyle(color: cinemaFontWhite),
               decoration: const InputDecoration(
-                labelText: 'Name',
-                hintText: 'Enter your name',
-                labelStyle: TextStyle(color: cinemaFontWhite),
-                hintStyle: TextStyle(color: cinemaFontMuted),
                 border: OutlineInputBorder(),
+                labelText: 'Full name',
+                hintText: 'Enter your name',
               ),
             ),
             const SizedBox(height: 16),
+
             TextField(
               controller: _addressController,
-              style: const TextStyle(color: cinemaFontWhite),
+              maxLines: 3,
               decoration: const InputDecoration(
-                labelText: 'Address',
-                hintText: 'Enter your address',
-                labelStyle: TextStyle(color: cinemaFontWhite),
-                hintStyle: TextStyle(color: cinemaFontMuted),
                 border: OutlineInputBorder(),
+                labelText: 'Delivery address',
+                hintText: 'Enter delivery address',
               ),
             ),
             const SizedBox(height: 16),
+
             TextField(
               controller: _emailController,
-              style: const TextStyle(color: cinemaFontWhite),
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
-                labelText: 'Email',
-                hintText: 'Enter your email',
-                labelStyle: TextStyle(color: cinemaFontWhite),
-                hintStyle: TextStyle(color: cinemaFontMuted),
                 border: OutlineInputBorder(),
+                labelText: 'Email address',
+                hintText: 'Enter your email',
               ),
             ),
-            CheckboxListTile(
-              contentPadding: EdgeInsets.zero,
-              title: const Text(
-                'Receive newsletter',
-                style: TextStyle(color: cinemaFontWhite),
-              ),
-              value: _receiveNewsletter,
-              onChanged: (bool? value) {
-                setState(() {
-                  _receiveNewsletter = value ?? false;
-                });
-              },
+            const SizedBox(height: 16),
+
+            Row(
+              children: [
+                const Expanded(
+                  child: Text('Receive newsletter and offers'),
+                ),
+                Switch(
+                  value: _receiveNewsletter,
+                  onChanged: (bool value) {
+                    setState(() {
+                      _receiveNewsletter = value;
+                    });
+                  },
+                ),
+              ],
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 20),
+
             SizedBox(
               width: double.infinity,
               child: PrimaryButton(
@@ -135,10 +133,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const SizedBox(height: 12),
               Text(
                 _confirmationMessage,
-                style: const TextStyle(
-                  color: cinemaFontWhite,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ],
