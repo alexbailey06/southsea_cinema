@@ -111,7 +111,7 @@ class _FilmListingState extends State<FilmListing> {
                       DropdownMenuEntry(value: 5, label: "5"),
                     ],
                   ),
-                  Text("Adult £7.50",
+                  Text("Adult £10.00",
                       style: TextStyle(fontSize: 18, color: cinemaFontWhite)),
                 ],
               ),

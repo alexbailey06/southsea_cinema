@@ -27,7 +27,7 @@
         "runTime":"1 hours, 49 minutes",
         "screeningTime":"december 1st 2026, 17:10",
         "price": 10.00,
-        "imagePath":"assets/images/love_and_monsters_poster.jpg"
+        "imagePath":"assets/images/love_and_monster_poster.jpg"
     },
     {
         "id":"fakefilm",
@@ -36,7 +36,7 @@
         "ageRating":"Rated 90",
         "runTime":"0 hours, 0 minutes",
         "screeningTime":"Decembruary 32nd 2020, 25:61",
-        "price": "free",
+        "price": 0.00,
         "imagePath":"assets/images/fake_film_poster.jpg"
     }
 

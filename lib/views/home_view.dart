@@ -52,7 +52,12 @@ class _HomeViewState extends State<HomeView> {
     if (_loading) {
       body = const Center(child: CircularProgressIndicator());
     } else if (_errorMessage.isNotEmpty) {
-      body = Center(child: Text(_errorMessage));
+      body = Center(
+        child: Text(
+          _errorMessage,
+          style: const TextStyle(color: cinemaFontWhite, fontSize: 16),
+        ),
+      );
     } else {
       body = ListView.builder(
         itemCount: _films.length,
