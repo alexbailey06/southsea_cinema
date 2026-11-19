@@ -18,5 +18,26 @@
         "screeningTime": "november 4th 2026, 20:45",
         "price": 10.00,
         "imagePath": "assets/images/superman_poster.jpg"
+    },
+    {  
+        "id":"love and monsters",
+        "name":"Love And Monsters",
+        "description":" Seven years after rocket-destroyed asteroid debris mutates Earth's cold-blooded creatures into giant monsters.",
+        "ageRating":"PG 13",
+        "runTime":"1 hours, 49 minutes",
+        "screeningTime":"december 1st 2026, 17:10",
+        "price": 10.00,
+        "imagePath":"assets/images/love_and_monsters_poster.jpg"
+    },
+    {
+        "id":"fakefilm",
+        "name":"Fake Film",
+        "description":"this film doesnt exist and WONT EVER EXIST",
+        "ageRating":"Rated 90",
+        "runTime":"0 hours, 0 minutes",
+        "screeningTime":"Decembruary 32nd 2020, 25:61",
+        "price": "free",
+        "imagePath":"assets/images/fake_film_poster.jpg"
     }
+
 ]
