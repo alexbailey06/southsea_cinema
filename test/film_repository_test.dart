@@ -1,7 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:southsea_cinema/repositories/film_repository.dart';
+import 'package:southsea_cinema/model/film.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   group('FilmRepository tests', () {
     test('getFilms returns two films', () {
       final repository = FilmRepository();
@@ -33,6 +35,17 @@ void main() {
       final film = repository.getFilmById('non-existent');
 
       expect(film, isNull);
+    });
+  
+    test('loadFilmsFromAsset reads the bundled JSON menu', () async {
+      final FilmRepository repository = FilmRepository();
+      final List<Film> films =
+          await repository.loadFilmsFromAsset();
+
+      expect(films.length, 2);
+      expect(films[0].id, 'bullet train');
+      expect(films[1].id, 'superman');
+      expect(repository.getFilms(), films);
     });
   });
 }

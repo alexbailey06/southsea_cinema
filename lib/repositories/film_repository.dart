@@ -67,4 +67,10 @@ class FilmRepository {
     return loadedFilms;
   }
 
+  Future<List<Film>> loadFilmsFromAsset({
+    String assetPath = "assets/data/films.json",
+  }) {
+    return loadFilmsFromAssets(assetPath: assetPath);
+  }
+
 }

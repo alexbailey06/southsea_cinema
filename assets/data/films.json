@@ -1,22 +1,22 @@
 [
     {
         "id": "bullet train",
-        "title": "Bullet Train",
+        "name": "Bullet Train",
         "description": "Based on the 2010 Japanese novel it centers around a group of assassins on a Japanese high-speed train who end up in conflict with each other.",
         "ageRating": "Rated 15",
         "runTime": "2 hours, 6 minutes",
         "screeningTime": "october 31st 2026, 18:30",
         "price": 10.00,
-        "imagePath": "assets/images/bullet-train.jpg"
+        "imagePath": "assets/images/bullet_train_poster.jpeg"
     },
     {
         "id": "superman",
-        "title": "Superman (2025)",
+        "name": "Superman (2025)",
         "description": "Superman faces unintended consequences after he intervenes in an international conflict orchestrated by billionaire Lex Luthor (Hoult).",
-        "ageRating": "PG13",
+        "ageRating": "PG 13",
         "runTime": "2 hours, 9 minutes",
         "screeningTime": "november 4th 2026, 20:45",
         "price": 10.00,
-        "imagePath": "assets/images/superman.jpg"
+        "imagePath": "assets/images/superman_poster.jpg"
     }
 ]
