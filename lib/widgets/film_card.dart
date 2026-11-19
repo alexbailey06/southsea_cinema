@@ -46,6 +46,17 @@ class FilmCard extends StatelessWidget {
                 width: 100.0,
                 height: 150.0,
                 fit: BoxFit.cover,
+                errorBuilder: (
+                  BuildContext context,
+                  Object error,
+                  StackTrace? stackTrace,
+                ) {
+                  return const SizedBox(
+                    width: 80,
+                    height: 80,
+                    child: Center(child: Text('Image unavailable')),
+                  );
+                },
               ),
               const SizedBox(width: 16.0),
               Expanded(
