@@ -5,6 +5,7 @@ import 'package:southsea_cinema/repositories/film_repository.dart';
 import 'package:southsea_cinema/widgets/basket_button.dart';
 import 'package:southsea_cinema/widgets/film_card.dart';
 import 'package:southsea_cinema/widgets/settings_button.dart';
+import 'package:southsea_cinema/widgets/nav_drawer.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -69,9 +70,13 @@ class _HomeViewState extends State<HomeView> {
 
     return Scaffold(
         appBar: AppBar(
+          
           title: const Text(appTitle, style: cinemaHeaderStyle),
           actions: const [SettingsButton(), BasketButton()],
+ 
         ),
+               drawer: const NavDrawer(),
         body: body);
+
   }
 }
