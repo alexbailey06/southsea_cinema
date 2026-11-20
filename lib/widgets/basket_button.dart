@@ -6,7 +6,7 @@ class BasketButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Icon(Icons.movie_filter),
+      icon: const Icon(Icons.shopping_cart),
       onPressed: () {
         ModalRoute<dynamic>? modalRoute = ModalRoute.of(context);
         String currentRoute = '';
