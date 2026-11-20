@@ -96,6 +96,7 @@ class _FilmListingState extends State<FilmListing> {
                 children: [
                   DropdownMenu<int>(
                     initialSelection: _selectedQuantity,
+                    textStyle: cinemaHeaderStyle,
                     onSelected: (int? value) {
                       if (value != null) {
                         setState(() {
